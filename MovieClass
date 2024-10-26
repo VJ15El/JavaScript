@@ -1,0 +1,24 @@
+class Movie {
+  constructor(title, studio, rating = "PG") {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+
+  static getPg(mov) {
+    mov.filter((moviev) => moviev === "PG");
+    return mov;
+  }
+}
+
+const movies = [
+  new Movie("Casino Royale", "Eon Productions", "PG­13"),
+  new Movie("Justice league", "DC", "R"),
+  new Movie("Avengers", "Marvel", "PG12"),
+];
+
+const filmov = Movie.getPg(movies);
+console.log(filmov);
+
+const movieval = new Movie("Casino Royale", "Eon Productions", "PG­13");
+console.log(movieval);
